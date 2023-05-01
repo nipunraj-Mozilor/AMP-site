@@ -19,6 +19,15 @@ class Page extends React.PureComponent {
             type="text/javascript"
             src="https://cdn-cookieyes.com/client_data/5612d14b9a14c1fbee45d6b6/script.js"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZC2EL56W8Y"
+          />
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'G-ZC2EL56W8Y');
+          </script>
           <title>Mood | Breaking the Status Quo</title>
           <link rel="icon" type="image/png" href="/static/favicon.png" />
           <meta charSet="utf-8" />
