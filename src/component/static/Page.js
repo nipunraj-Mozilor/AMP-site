@@ -162,15 +162,25 @@ class Page extends React.PureComponent {
               }}
             />
           </noscript>
+          <script
+            async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+          />
         </head>
-        <body
-          dangerouslySetInnerHTML={{
+        <body>
+          <amp-analytics
+            config="https://www.googletagmanager.com/amp.json?id=GTM-K2NPC2P&gtm.url=SOURCE_URL"
+            data-credentials="include"
+          />
+          dangerouslySetInnerHTML=
+          {{
             __html:
               markup +
               sidebarMarkup +
               ReactDOMServer.renderToStaticMarkup(footer),
           }}
-        />
+        </body>
       </html>
     );
   }
