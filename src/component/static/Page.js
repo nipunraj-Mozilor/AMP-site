@@ -14,6 +14,11 @@ class Page extends React.PureComponent {
     return (
       <html amp="true" lang={lang}>
         <head>
+          <script
+            id="cookieyes"
+            type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/5612d14b9a14c1fbee45d6b6/script.js"
+          />
           <title>Mood | Breaking the Status Quo</title>
           <link rel="icon" type="image/png" href="/static/favicon.png" />
           <meta charSet="utf-8" />
