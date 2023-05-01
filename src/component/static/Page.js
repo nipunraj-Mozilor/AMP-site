@@ -162,14 +162,14 @@ class Page extends React.PureComponent {
               }}
             />
           </noscript>
-          <script
+          {/* <script
             async
             custom-element="amp-analytics"
             src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
-          />
+          /> */}
         </head>
         <body>
-          <amp-analytics
+          {/* <amp-analytics
             config="https://www.googletagmanager.com/amp.json?id=GTM-K2NPC2P&gtm.url=SOURCE_URL"
             data-credentials="include"
           />
@@ -179,7 +179,25 @@ class Page extends React.PureComponent {
               markup +
               sidebarMarkup +
               ReactDOMServer.renderToStaticMarkup(footer),
-          }}
+          }} */}
+          <amp-analytics type="gtag">
+            <script
+              type="application/json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  vars: {
+                    ['gtag_id']: 'UA-266574322-1',
+                    config: {
+                      ['UA-266574322-1']: {groups: 'default'},
+                    },
+                  },
+                  linkers: {
+                    enabled: true,
+                  },
+                }),
+              }}
+            />
+          </amp-analytics>
         </body>
       </html>
     );
